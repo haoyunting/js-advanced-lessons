@@ -81,3 +81,34 @@ console.log(Boolean("abc"));
 true
 console.log(Boolean({}));
 true
+
+//函数定义三种方法
+function max(a,b){}
+var max = function (a,b){};
+var max = new Function("a","b","return a>b?a:b");
+
+//对象方法调用
+//嵌套函数中的obj不一定是结果，this指代全局
+var x=45;
+var obj={
+x:23,
+test:function(){
+function foo(){
+console.log(this.x);}
+foo();}};
+obj.test();
+45
+
+//添加给对象添加方法
+var x=45;
+var obj=function(){
+    x=3;
+};
+var test=function(){
+console.log("输出:",this.x);
+};
+obj.test=test;
+obj.test();
+输出: undefined
+
+//trace追踪 debug调试 (设置断点)
