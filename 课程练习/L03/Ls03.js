@@ -111,4 +111,4 @@ obj.test=test;
 obj.test();
 输出: undefined
 
-//trace追踪 debug调试 (设置断点)
+//trace追踪 debug调试 (设置断点)步骤执行
